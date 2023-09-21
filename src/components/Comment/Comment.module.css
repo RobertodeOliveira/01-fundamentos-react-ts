@@ -1,0 +1,87 @@
+.comment {
+  display: flex;
+  margin-top: 32px;
+  gap: 1rem;
+  /* flex-direction: column; */
+}
+
+.avatar {
+  box-sizing: initial; /*Forma de resolver que a imagem não perca seu tamanho original por conta da borda e sim expanda*/ 
+  height: 3rem;
+  width: 3rem;
+  border-radius: 8px;
+ }
+
+ .commentBox {
+  height: 120px;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--gray-700);
+  padding: 1rem;
+ }
+
+ .commentContent header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  line-height: 22px;
+ }
+ 
+.commentMessage{
+  color: var(--green-100);
+  width: 100%;
+}
+ 
+.author {
+  color: var(white);
+  font-size: 0.875rem;
+  font-weight: 700;
+ }
+
+ .time{
+  font-size: 0.75rem;
+  color: var(--gray-400);
+ }
+
+
+ .commentBox button {
+  display: flex;
+  background: none;
+  color: var(--gray-300);
+  border: none;
+  height: 100%;
+  border-radius: 2px;
+ }
+
+ .commentBox button:hover {
+  cursor: pointer;
+  color: var(--red-500);
+ }
+
+ .buttonInteractive button {
+  background: transparent;
+  color: var(--gray-400);
+  border: none;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-top: 1.125rem;
+ }
+
+ .buttonInteractive button svg {
+  margin-right: 10px;
+ }
+
+ .buttonInteractive button span::before {
+  content: "\2022";
+  padding: 0 0.25rem;
+  
+ }
+
+ .buttonInteractive button:hover {
+  color: var(--green-300);
+ }
+
+.commentWrapper {
+  width: 100%;
+}
