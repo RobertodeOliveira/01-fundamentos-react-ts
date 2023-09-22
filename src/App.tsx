@@ -19,7 +19,7 @@ function App() {
           {posts.map( post => {
             return (
               <div key={post.id}>
-               <Post author={post.author} content={post.content} publishedAt={post.publishedAt} />
+               <Post author={post.author} content={post.content} publishedAt={post.publishedAt} id={post.id} />
               </div>
             )
           })}

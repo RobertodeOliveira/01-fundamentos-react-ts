@@ -1,6 +1,21 @@
-export const posts = [
+interface Post {
+  id: number
+  author: {
+    avatarUrl: string
+    name: string
+    role: string
+  },
+  content: {
+    type: 'paragraph' | 'link'
+    content: string
+  }[]
+  publishedAt: Date
+}
+
+
+export const posts: Post[]= [
   {
-    id: '1',
+    id: 1,
     author: {
       avatarUrl:'https://avatars.githubusercontent.com/u/92532306?v=4',
       name: "Roberto dos Santos",
@@ -14,7 +29,7 @@ export const posts = [
     publishedAt: new Date('2023-09-03 23:14')
   },
   {
-    id: '2',
+    id: 2,
     author: {
       avatarUrl:'https://avatars.githubusercontent.com/u/67019242?v=4',
       name: "Sah Melo",

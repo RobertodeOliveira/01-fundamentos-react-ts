@@ -7,22 +7,22 @@ import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import {  ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 
-interface Author { 
+ interface Author { 
   name: string
   role: string
   avatarUrl: string;
 }
 
-interface Content {
+ interface Content {
   type: 'paragraph' | 'link'
   content: string 
 }
 
-interface PostProps {
+ interface PostProps {
   id: number
   author: Author
-  publishedAt: Date
   content: Content[]
+  publishedAt: Date
 }
 
 export function Post({ author, publishedAt, content }: PostProps) {
@@ -55,7 +55,7 @@ export function Post({ author, publishedAt, content }: PostProps) {
     setNewCommentText(event.target.value)
   }
 
-  const deleteComment = (commentToDelete: string) => {
+  const deleteComment = (commentToDelete: string ) => {
     const commentWithouDeleteOne = comment.filter(comment => {
       return comment ==! commentToDelete
     })
